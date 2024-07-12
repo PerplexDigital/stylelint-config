@@ -1,0 +1,72 @@
+{
+    "name": "@perplex-digital/stylelint-config",
+    "version": "1.0.0",
+    "description": "Box model-based property sort order for Stylelint.",
+    "keywords": [
+        "logical properties",
+        "properties-order",
+        "property order",
+        "box model",
+        "stylelint",
+        "stylelint-config",
+        "stylelint-order"
+    ],
+    "homepage": "https://github.com/PerplexDigital/stylelint-config",
+    "bugs": "https://github.com/PerplexDigital/stylelint-config/issues",
+    "repository": "PerplexDigital/stylelint-config",
+    "license": "ISC",
+    "author": "Tobias Boekwijt (https://perplex.nl/en/perplexers#tobias-boekwijt)",
+    "type": "module",
+    "exports": {
+        ".": "./index.js",
+        "./declarations": "./declarations.js",
+        "./groups": "./groups.js"
+    },
+    "main": "index.js",
+    "files": [
+        "index.js",
+        "declarations.js",
+        "groups.js"
+    ],
+    "scripts": {
+        "changeset": "changeset add",
+        "lint": "eslint '**/*.js'",
+        "prepare": "husky",
+        "release": "changeset publish",
+        "test": "node --test"
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "package.json": "prettier --write"
+    },
+    "dependencies": {
+        "stylelint-order": "^6.0.4"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.6.0",
+        "@commitlint/config-conventional": "^19.6.0",
+        "@changesets/cli": "^2.27.10",
+        "@zazen/changesets-changelog": "^2.0.3",
+        "@nuxt/eslint-config": "^0.7.2",
+        "@stylistic/stylelint-plugin": "^3.1.1",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.2.10",
+        "prettier": "^3.4.2",
+        "stylelint": "^16.11.0",
+        "stylelint-config-recommended-vue": "^1.5.0",
+        "stylelint-config-standard": "^36.0.1",
+        "stylelint-high-performance-animation": "^1.10.0",
+        "stylelint-order": "^6.0.4",
+        "stylelint-use-logical-spec": "^5.0.1",
+        "typescript": "^5.7.2"
+    },
+    "peerDependencies": {
+        "stylelint": ">=16"
+    },
+    "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
+}
