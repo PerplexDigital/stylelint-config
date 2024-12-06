@@ -55,7 +55,7 @@ const config = {
             },
         ],
         // Plugin rules
-        'liberty/use-logical-spec': 'always',
+        'liberty/use-logical-spec': ['always', { except: [/width/i, /height/i] }],
         '@stylistic/block-closing-brace-newline-before': 'always',
         '@stylistic/block-opening-brace-newline-after': 'always',
         '@stylistic/declaration-block-semicolon-newline-after': 'always',
