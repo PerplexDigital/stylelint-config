@@ -1,6 +1,6 @@
 {
     "name": "@perplex-digital/stylelint-config",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Box model-based property sort order for Stylelint.",
     "keywords": [
         "logical properties",
@@ -15,7 +15,7 @@
     "bugs": "https://github.com/PerplexDigital/stylelint-config/issues",
     "repository": "PerplexDigital/stylelint-config",
     "license": "ISC",
-    "author": "Tobias Boekwijt (https://perplex.nl/en/perplexers#tobias-boekwijt)",
+    "author": "Tobias Boekwijt (https://perplex.nl/en/about-perplex/the-perplexers#tobias-boekwijt)",
     "type": "module",
     "exports": {
         ".": "./index.js",
@@ -43,7 +43,12 @@
         "package.json": "prettier --write"
     },
     "dependencies": {
-        "stylelint-order": "^6.0.4"
+        "@stylistic/stylelint-plugin": "^3.1.1",
+        "stylelint-config-recommended-vue": "^1.5.0",
+        "stylelint-config-standard": "^36.0.1",
+        "stylelint-high-performance-animation": "^1.10.0",
+        "stylelint-order": "^6.0.4",
+        "stylelint-use-logical-spec": "^5.0.1"
     },
     "devDependencies": {
         "@commitlint/cli": "^19.6.0",
@@ -51,18 +56,12 @@
         "@changesets/cli": "^2.27.10",
         "@zazen/changesets-changelog": "^2.0.3",
         "@nuxt/eslint-config": "^0.7.2",
-        "@stylistic/stylelint-plugin": "^3.1.1",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-prettier": "^5.2.1",
         "husky": "^9.1.7",
         "lint-staged": "^15.2.10",
         "prettier": "^3.4.2",
         "stylelint": "^16.11.0",
-        "stylelint-config-recommended-vue": "^1.5.0",
-        "stylelint-config-standard": "^36.0.1",
-        "stylelint-high-performance-animation": "^1.10.0",
-        "stylelint-order": "^6.0.4",
-        "stylelint-use-logical-spec": "^5.0.1",
         "typescript": "^5.7.2"
     },
     "peerDependencies": {
