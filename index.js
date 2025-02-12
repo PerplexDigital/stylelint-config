@@ -23,6 +23,7 @@ const config = {
         'color-no-hex': true,
         'comment-empty-line-before': null,
         'custom-media-pattern': null,
+        'custom-property-pattern': null,
         'declaration-block-no-redundant-longhand-properties': [
             true,
             {
