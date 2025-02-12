@@ -1,6 +1,6 @@
 {
     "name": "@perplex-digital/stylelint-config",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Box model-based property sort order for Stylelint.",
     "keywords": [
         "logical properties",
@@ -43,29 +43,29 @@
         "package.json": "prettier --write"
     },
     "dependencies": {
-        "@stylistic/stylelint-plugin": "^3.1.1",
-        "stylelint-config-recommended-vue": "^1.5.0",
+        "@stylistic/stylelint-plugin": "^3.1.2",
+        "stylelint-config-recommended-vue": "^1.6.0",
         "stylelint-config-standard": "^36.0.1",
         "stylelint-high-performance-animation": "^1.10.0",
         "stylelint-order": "^6.0.4",
         "stylelint-use-logical-spec": "^5.0.1"
     },
     "devDependencies": {
-        "@commitlint/cli": "^19.6.0",
-        "@commitlint/config-conventional": "^19.6.0",
-        "@changesets/cli": "^2.27.10",
+        "@changesets/cli": "^2.27.12",
+        "@commitlint/cli": "^19.7.1",
+        "@commitlint/config-conventional": "^19.7.1",
+        "@nuxt/eslint-config": "^1.0.1",
         "@zazen/changesets-changelog": "^2.0.3",
-        "@nuxt/eslint-config": "^0.7.2",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-prettier": "^5.2.1",
+        "eslint": "^9.20.1",
+        "eslint-config-prettier": "^10.0.1",
+        "eslint-plugin-prettier": "^5.2.3",
         "husky": "^9.1.7",
-        "lint-staged": "^15.2.10",
-        "prettier": "^3.4.2",
-        "stylelint": "^16.11.0",
-        "typescript": "^5.7.2"
+        "lint-staged": "^15.4.3",
+        "prettier": "^3.5.0",
+        "stylelint": "^16.14.1",
+        "typescript": "^5.7.3"
     },
     "peerDependencies": {
         "stylelint": ">=16"
-    },
-    "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
+    }
 }
