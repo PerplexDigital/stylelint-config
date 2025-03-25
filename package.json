@@ -1,6 +1,6 @@
 {
     "name": "@perplex-digital/stylelint-config",
-    "version": "1.0.3",
+    "version": "2.0.0",
     "description": "Box model-based property sort order for Stylelint.",
     "keywords": [
         "logical properties",

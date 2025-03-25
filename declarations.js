@@ -3,11 +3,7 @@ export default [
         'custom-properties',
         {
             type: 'at-rule',
-            name: 'extend',
-        },
-        {
-            type: 'at-rule',
-            name: 'mixin',
+            name: 'apply',
             hasBlock: false,
         },
         'declarations',
@@ -48,13 +44,13 @@ export default [
         },
         {
             type: 'rule',
-            selector: '^&:(fullscreen|modal|picture-in-picture)',
+            selector: '^&:(open|popover-open|modal|fullscreen|picture-in-picture)',
             // Matches element display state pseudo-classes
         },
         {
             type: 'rule',
             selector:
-                '^&:(autofill|enabled|disabled|read|placeholder-shown|default|checked|indeterminate|blank|valid|range|required|optional)',
+                '^&:(enabled|disabled|read-only|read-write|placeholder-shown|autofill|default|checked|indeterminate|blank|valid|invalid|range|required|optional|user-valid|user-invalid)',
             // Matches input pseudo-classes
         },
         {
@@ -64,12 +60,12 @@ export default [
         },
         {
             type: 'rule',
-            selector: '^&:(link|visited|target|scope)',
+            selector: '^&:(any-link|link|visited|local-link|target|target-within|scope)',
             // Matches location pseudo-classes
         },
         {
             type: 'rule',
-            selector: '^&:(playing|paused)',
+            selector: '^&:(playing|paused|seeking|stalled|muted|volume-locked)',
             // Matches resource state pseudo-classes
         },
         {
@@ -79,20 +75,20 @@ export default [
         },
         {
             type: 'rule',
-            selector: '^&:(hover|active|focus)',
+            selector: '^&:(hover|active|focus|focus-visible|focus-within)',
             // Matches user-action pseudo-classes
         },
         {
             type: 'at-rule',
-            name: 'media',
-            parameter: '--(mouse|touch)',
-            // Matches media-queries '@media (--mouse) and '@media (--touch)'
+            name: 'variant',
+            parameter: 'hoverfocus|mouse|touch',
+            // Matches media-queries '@variant hoverfocus', '@variant mouse' and '@variant touch'
             hasBlock: true,
         },
         {
             type: 'rule',
-            selector: '^&((\\.|\\[)|(.*(empty|child|type|is|not|where|has)).*)',
-            // Matches modifiers like '&.example', tree-structural pseudo-classes and functional pseudo-classes
+            selector: '^&((\\.|\\[)|(.*(empty|child|type|is|not|where|has|state)).*)',
+            // Matches modifiers like '&.example' and tree-structural, functional, custom state pseudo-classes
         },
         {
             type: 'rule',
@@ -105,9 +101,15 @@ export default [
         },
         {
             type: 'at-rule',
+            name: 'variant',
+            parameter: '?!hoverfocus|mouse|touch',
+            // Matches all other media-queries like '@variant xl' and '@variant motionOK'
+            hasBlock: true,
+        },
+        {
+            type: 'at-rule',
             name: 'media',
-            parameter: '--(?!mouse|touch)',
-            // Matches all other media-queries like '@media (--xl-up)'
+            // Matches all other media-queries like '@media (width > 1472px)'
             hasBlock: true,
         },
     ],
