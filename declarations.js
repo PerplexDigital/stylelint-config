@@ -81,7 +81,7 @@ export default [
         {
             type: 'at-rule',
             name: 'variant',
-            parameter: 'hoverfocus|mouse|touch',
+            parameter: '(hover|focus|hoverfocus|mouse|touch)',
             // Matches media-queries '@variant hoverfocus', '@variant mouse' and '@variant touch'
             hasBlock: true,
         },
@@ -102,7 +102,7 @@ export default [
         {
             type: 'at-rule',
             name: 'variant',
-            parameter: '?!hoverfocus|mouse|touch',
+            parameter: '(?!hover|focus|hoverfocus|mouse|touch)',
             // Matches all other media-queries like '@variant xl' and '@variant motionOK'
             hasBlock: true,
         },
