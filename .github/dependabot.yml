@@ -7,6 +7,7 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    target-branch: develop
     labels:
       - upgrade
     versioning-strategy: increase-if-necessary
@@ -15,5 +16,6 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    target-branch: develop
     labels:
       - upgrade
