@@ -2,7 +2,7 @@ import order from './order.js';
 import propertyGroups from './property-groups.js';
 
 const config = {
-    extends: ['stylelint-config-standard', 'stylelint-config-recommended-vue'],
+    extends: ['@dreamsicle.io/stylelint-config-tailwindcss', 'stylelint-config-recommended-vue'],
     plugins: [
         '@stylistic/stylelint-plugin',
         'stylelint-order',
@@ -38,7 +38,6 @@ const config = {
             },
         ],
         'function-no-unknown': null,
-        'import-notation': 'string',
         'no-descending-specificity': null,
         'no-empty-source': [
             true,
