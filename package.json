@@ -50,6 +50,7 @@
         "@dreamsicle.io/stylelint-config-tailwindcss": "^1.2.1",
         "@stylistic/stylelint-plugin": "^4.0.1",
         "stylelint-config-recommended-vue": "^1.6.1",
+        "stylelint-config-standard": "^40.0.0",
         "stylelint-high-performance-animation": "^1.11.0",
         "stylelint-order": "^7.0.1",
         "stylelint-use-logical-spec": "^5.0.1"
