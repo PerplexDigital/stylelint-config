@@ -728,11 +728,13 @@ const propertyGroups = [
     {
         properties: [
             'anchor-name',
-            'position-anchor',
+            'anchor-scope',
+            'anchor-center',
             'position-area',
+            'position-anchor',
             'position-try',
-            'position-try-fallbacks',
             'position-try-order',
+            'position-try-fallbacks',
             'position-visibility',
         ],
     },
