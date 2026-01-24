@@ -9,11 +9,14 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
       # https://github.com/actions/checkout
       - name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           # This makes Actions fetch all Git history so that Changesets can
           # generate changelogs with the correct commits.
@@ -25,10 +28,10 @@ jobs:
           version: latest
 
       # https://github.com/actions/setup-node
-      - name: Setup Node.js 22.x
-        uses: actions/setup-node@v5
+      - name: Setup Node.js 24.x
+        uses: actions/setup-node@v6
         with:
-          node-version: 22.x
+          node-version: 24.x
           cache: pnpm
 
       - name: Install dependencies
@@ -43,7 +46,7 @@ jobs:
           commit: 'chore: publish release'
           # This expects you to have a script called release which does a build
           # for your packages and calls changeset publish
-          publish: npm run release
+          publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
