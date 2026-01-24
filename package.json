@@ -1,6 +1,6 @@
 {
     "name": "@perplex-digital/stylelint-config",
-    "version": "17.1.0",
+    "version": "17.1.1",
     "description": "Order and Concentric-based property sorting for Stylelint.",
     "keywords": [
         "tailwind",
