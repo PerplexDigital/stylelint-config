@@ -1,8 +1,15 @@
 # Change Log
 
+## 17.1.1
+
+### Patch Changes
+
+-   - Revert replace `stylelint-config-standard` with `@dreamsicle.io/stylelint-config-tailwindcss` ([#17](https://github.com/PerplexDigital/stylelint-config/pull/17))
+
 ## 17.1.0
 
 ### Minor Changes
+
 - Add rest of Anchor Positioning properties ([#15](https://github.com/PerplexDigital/stylelint-config/pull/15))
     - [`anchor-scope`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/anchor-scope)
     - `anchor-center`
