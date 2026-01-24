@@ -1,5 +1,18 @@
 # Change Log
 
+## 17.1.0
+
+### Minor Changes
+- Add rest of Anchor Positioning properties ([#15](https://github.com/PerplexDigital/stylelint-config/pull/15))
+    - [`anchor-scope`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/anchor-scope)
+    - `anchor-center`
+- Replace `stylelint-config-standard` with `@dreamsicle.io/stylelint-config-tailwindcss` in the list of extended configs in README.md and src/index.js, and remove `stylelint-config-standard` from dependencies in package.json. ([#15](https://github.com/PerplexDigital/stylelint-config/pull/15))
+- Add Corner Shape properties ([#15](https://github.com/PerplexDigital/stylelint-config/pull/15))
+    - [`corner`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner)
+    - longhand `corner-*` properties
+    - [`corner-shape`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-shape)
+    - longhand `corner-*-shape` properties
+
 ## 17.0.0
 
 ### Major Changes
