@@ -33,7 +33,8 @@
 ## Advanced
 
 The default setup applies these rules:
-- `@dreamsicle.io/stylelint-config-tailwindcss` (including `stylelint-config-standard`)
+- `stylelint-config-standard`
+- `@dreamsicle.io/stylelint-config-tailwindcss`
 - `stylelint-config-recommended-vue` (including `stylelint-config-recommended` and `stylelint-config-html`)
 - `@stylistic/stylelint-plugin`,
 - `stylelint-use-logical-spec`
