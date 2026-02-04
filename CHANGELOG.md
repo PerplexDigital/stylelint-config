@@ -1,5 +1,12 @@
 # Change Log
 
+## 17.3.0
+
+### Minor Changes
+
+- Bump packages ([#25](https://github.com/PerplexDigital/stylelint-config/pull/25))
+    - from `stylelint-use-logical-spec` 5.0.1 to `stylelint-use-logical` 2.1.3
+
 ## 17.2.0
 
 ### Minor Changes
