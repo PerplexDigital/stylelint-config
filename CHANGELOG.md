@@ -1,5 +1,14 @@
 # Change Log
 
+## 17.4.0
+
+### Minor Changes
+
+-   - Remove invalid anchor-center property ([#33](https://github.com/PerplexDigital/stylelint-config/pull/33))
+    - Fix typo in scroll-behavior property
+    - Bump all dependencies to latest versions
+    - Allow [stylelint-order v8](https://github.com/hudochenkov/stylelint-order/releases/tag/8.0.0) as peer dependency
+
 ## 17.3.0
 
 ### Minor Changes
