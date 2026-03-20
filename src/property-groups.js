@@ -137,7 +137,7 @@ const propertyGroups = [
             'text-overflow',
             '-webkit-line-clamp',
             'line-clamp',
-            'scroll-behaviour',
+            'scroll-behavior',
         ],
     },
 
@@ -713,7 +713,6 @@ const propertyGroups = [
         properties: [
             'anchor-name',
             'anchor-scope',
-            'anchor-center',
             'position-area',
             'position-anchor',
             'position-try',
