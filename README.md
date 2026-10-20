@@ -77,7 +77,7 @@ Releases are automated with [Changesets](https://github.com/changesets/changeset
 5. Merge the "Publish release" PR. The workflow then publishes to npm, pushes the git tag and creates a [GitHub release](https://github.com/PerplexDigital/stylelint-config/releases) with the changelog as release notes.
 6. The workflow automatically merges `main` back into `develop` so it has the version bump and changelog.
 
-Publishing requires the `NPM_TOKEN` repository secret.
+Publishing uses [npm trusted publishing](https://docs.npmjs.com/trusted-publishers) (OIDC), so no npm token is needed. The trusted publisher is configured on npmjs.com for the `release.yml` workflow.
 
 ## References
 

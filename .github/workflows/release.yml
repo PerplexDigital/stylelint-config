@@ -12,6 +12,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      id-token: write
 
     steps:
       # https://github.com/actions/checkout
@@ -31,7 +32,6 @@ jobs:
         with:
           node-version: 24.x
           cache: pnpm
-          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: pnpm install
@@ -49,7 +49,6 @@ jobs:
         env:
           # Used by @zazen/changesets-changelog to fetch PR/commit info
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Merge main into develop
         if: steps.changesets.outputs.published == 'true'
