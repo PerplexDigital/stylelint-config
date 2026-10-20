@@ -22,6 +22,26 @@ const propertyGroups = [
     },
 
     /**
+     * Multi-column layout.
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_multicol_layout#reference
+     */
+    {
+        properties: [
+            'columns',
+            'column-width',
+            'column-count',
+            'column-height',
+            'column-wrap',
+            'column-span',
+            'column-fill',
+            'column-rule',
+            'column-rule-width',
+            'column-rule-style',
+            'column-rule-color',
+        ],
+    },
+
+    /**
      * Flexible box layout.
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout#reference
      */
@@ -70,10 +90,10 @@ const propertyGroups = [
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_alignment#reference
      */
     {
+        properties: ['gap', 'row-gap', 'column-gap'],
+    },
+    {
         properties: [
-            'gap',
-            'row-gap',
-            'column-gap',
             'place-content',
             'place-items',
             'place-self',
@@ -91,7 +111,7 @@ const propertyGroups = [
      * Part of Display module, but relates to both Flexbox and Grid layout.
      */
     {
-        properties: ['order'],
+        properties: ['order', 'reading-flow', 'reading-order'],
     },
 
     /**
@@ -132,12 +152,17 @@ const propertyGroups = [
             'overflow-block',
             'overflow-x',
             'overflow-y',
+            'overflow-clip-margin',
             'scrollbar-gutter',
             '-webkit-overflow-scrolling',
             'text-overflow',
             '-webkit-line-clamp',
             'line-clamp',
             'scroll-behavior',
+            'overflow-anchor',
+            'scroll-marker-group',
+            'scroll-target-group',
+            'scroll-initial-target',
         ],
     },
 
@@ -158,6 +183,7 @@ const propertyGroups = [
             'margin-right',
             'margin-bottom',
             'margin-left',
+            'margin-trim',
         ],
     },
 
@@ -306,6 +332,7 @@ const propertyGroups = [
             'background-clip',
             'background-origin',
             'background-size',
+            'box-decoration-break',
             'box-shadow',
         ],
     },
@@ -342,12 +369,15 @@ const propertyGroups = [
             'font-family',
             'font-size',
             'font-size-adjust',
+            'text-size-adjust',
             'font-variation-settings',
             'font-style',
             'font-weight',
             'font-optical-sizing',
+            'font-width',
             'font-stretch',
             'font-feature-settings',
+            'font-language-override',
             'font-kerning',
             'font-variant',
             'font-variant-ligatures',
@@ -356,6 +386,7 @@ const propertyGroups = [
             'font-variant-numeric',
             'font-variant-east-asian',
             'font-variant-position',
+            'font-variant-emoji',
             '-webkit-font-smoothing',
             '-moz-osx-font-smoothing',
             'font-smooth',
@@ -371,7 +402,18 @@ const propertyGroups = [
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_inline_layout#reference
      */
     {
-        properties: ['line-height', 'vertical-align', 'alignment-baseline', 'baseline-shift', 'dominant-baseline'],
+        properties: [
+            'line-height',
+            'text-box',
+            'text-box-trim',
+            'text-box-edge',
+            'initial-letter',
+            'vertical-align',
+            'alignment-baseline',
+            'baseline-source',
+            'baseline-shift',
+            'dominant-baseline',
+        ],
     },
 
     /**
@@ -405,11 +447,15 @@ const propertyGroups = [
             'text-align-last',
             'text-justify',
             'text-indent',
+            'hanging-punctuation',
             'text-transform',
             'word-spacing',
             'letter-spacing',
+            'text-autospace',
+            'text-spacing-trim',
             'hyphens',
             'hyphenate-character',
+            'hyphenate-limit-chars',
             'line-break',
             'word-break',
             'text-wrap',
@@ -446,6 +492,14 @@ const propertyGroups = [
     },
 
     /**
+     * Ruby layout.
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_ruby_layout#reference
+     */
+    {
+        properties: ['ruby-position', 'ruby-align', 'ruby-overhang'],
+    },
+
+    /**
      * Font loading.
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_font_loading#reference
      */
@@ -472,11 +526,15 @@ const propertyGroups = [
     {
         properties: [
             'appearance',
+            'field-sizing',
             'accent-color',
             'pointer-events',
             'touch-action',
             'cursor',
+            'caret',
             'caret-color',
+            'caret-shape',
+            'caret-animation',
             'zoom',
             'resize',
             'user-select',
@@ -576,7 +634,15 @@ const propertyGroups = [
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images#reference
      */
     {
-        properties: ['object-fit', 'object-position', 'image-orientation', 'image-rendering', 'image-resolution'],
+        properties: [
+            'object-fit',
+            'object-position',
+            'object-view-box',
+            'image-orientation',
+            'image-rendering',
+            'image-resolution',
+            'dynamic-range-limit',
+        ],
     },
 
     /**
@@ -648,6 +714,15 @@ const propertyGroups = [
      */
     {
         properties: [
+            'x',
+            'y',
+            'cx',
+            'cy',
+            'r',
+            'rx',
+            'ry',
+            'd',
+
             'text-anchor',
 
             'fill',
@@ -661,6 +736,7 @@ const propertyGroups = [
             'stroke-miterlimit',
             'stroke-dasharray',
             'stroke-dashoffset',
+            'vector-effect',
 
             'color-interpolation',
             'color-interpolation-filters',
@@ -752,6 +828,9 @@ const propertyGroups = [
             'transition-timing-function',
             'transition-duration',
             'transition-property',
+            'transition-behavior',
+            'interpolate-size',
+            'overlay',
         ],
     },
 
@@ -824,29 +903,7 @@ const propertyGroups = [
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fragmentation#reference
      */
     {
-        properties: ['break-before', 'break-after', 'break-inside', 'widows', 'orphans'],
-    },
-
-    /**
-     * Multi-column layout.
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_multicol_layout#reference
-     */
-    {
-        properties: [
-            'break-after',
-            'break-before',
-            'break-inside',
-            'column-fill',
-            'column-gap',
-            'column-span',
-            'column-rule',
-            'column-rule-color',
-            'column-rule-style',
-            'column-rule-width',
-            'columns',
-            'column-count',
-            'column-width',
-        ],
+        properties: ['page', 'break-before', 'break-after', 'break-inside', 'widows', 'orphans'],
     },
 ];
 
