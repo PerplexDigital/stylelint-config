@@ -10,16 +10,16 @@ jobs:
     steps:
       # https://github.com/actions/checkout
       - name: Checkout repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       # https://github.com/pnpm/action-setup
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         with:
           version: latest
 
       # https://github.com/actions/setup-node
       - name: Setup Node.js 24.x
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24.x
           cache: pnpm

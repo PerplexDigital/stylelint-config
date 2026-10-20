@@ -16,20 +16,20 @@ jobs:
     steps:
       # https://github.com/actions/checkout
       - name: Checkout repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           # This makes Actions fetch all Git history so that Changesets can
           # generate changelogs with the correct commits.
           fetch-depth: 0
 
       # https://github.com/pnpm/action-setup
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         with:
           version: latest
 
       # https://github.com/actions/setup-node
       - name: Setup Node.js 24.x
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24.x
           cache: pnpm
@@ -40,7 +40,7 @@ jobs:
       # https://github.com/changesets/action
       - name: Create release PR or publish to npm
         id: changesets
-        uses: changesets/action@v1
+        uses: changesets/action@v2.1.2
         with:
           title: 'Publish release'
           commit: 'chore: publish release'
