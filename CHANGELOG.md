@@ -1,5 +1,15 @@
 # Change Log
 
+## 17.5.0
+
+### Minor Changes
+
+- Add ordering for multi-column layout, `reading-flow`/`reading-order`, `margin-trim`, `overflow-clip-margin`, `overflow-anchor`, scroll marker/target properties and `box-decoration-break`; split `gap` properties into their own group ([#45](https://github.com/PerplexDigital/stylelint-config/pull/45))
+
+### Patch Changes
+
+- Update dependencies: `stylelint-config-recommended-vue` v2, `@stylistic/stylelint-plugin` 5.3.1, `stylelint-order` 8.1.2 ([#45](https://github.com/PerplexDigital/stylelint-config/pull/45))
+
 ## 17.4.0
 
 ### Minor Changes
