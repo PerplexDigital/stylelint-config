@@ -24,8 +24,6 @@ jobs:
 
       # https://github.com/pnpm/action-setup
       - uses: pnpm/action-setup@v6
-        with:
-          version: latest
 
       # https://github.com/actions/setup-node
       - name: Setup Node.js 24.x
