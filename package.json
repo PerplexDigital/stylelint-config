@@ -3,73 +3,64 @@
     "version": "17.4.0",
     "description": "Order and Concentric-based property sorting for Stylelint.",
     "keywords": [
-        "tailwind",
+        "concentric",
         "logical properties",
         "properties-order",
         "property order",
-        "concentric",
         "stylelint",
         "stylelint-config",
-        "stylelint-order"
+        "stylelint-order",
+        "tailwind"
     ],
     "homepage": "https://github.com/PerplexDigital/stylelint-config",
     "bugs": "https://github.com/PerplexDigital/stylelint-config/issues",
+    "license": "ISC",
+    "author": "Tobias Boekwijt (https://perplex.nl/en/about-perplex/the-perplexers#tobias-boekwijt)",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/PerplexDigital/stylelint-config.git"
     },
-    "license": "ISC",
-    "author": "Tobias Boekwijt (https://perplex.nl/en/about-perplex/the-perplexers#tobias-boekwijt)",
-    "type": "module",
-    "exports": {
-        ".": "./src/index.js",
-        "./order": "./src/order.js",
-        "./property-groups": "./src/property-groups.js"
-    },
-    "main": "src/index.js",
     "files": [
         "src/index.js",
         "src/order.js",
         "src/property-groups.js"
     ],
-    "scripts": {
-        "lint": "eslint '**/*.js'",
-        "fix": "eslint '**/*.js' --fix",
-        "prepare": "husky",
-        "release": "changeset publish",
-        "test": "node --test"
+    "type": "module",
+    "main": "src/index.js",
+    "exports": {
+        ".": "./src/index.js",
+        "./order": "./src/order.js",
+        "./property-groups": "./src/property-groups.js"
     },
-    "lint-staged": {
-        "*.js": [
-            "eslint --fix",
-            "prettier --write"
-        ],
-        "package.json": "prettier --write"
+    "scripts": {
+        "lint": "vp lint",
+        "fix": "vp lint --fix",
+        "prepare": "vp config",
+        "release": "changeset publish",
+        "test": "node --test",
+        "format": "vp fmt"
     },
     "dependencies": {
         "@dreamsicle.io/stylelint-config-tailwindcss": "^1.2.2",
-        "@stylistic/stylelint-plugin": "^5.0.1",
-        "stylelint-config-recommended-vue": "^1.6.1",
+        "@stylistic/stylelint-plugin": "^5.3.1",
+        "stylelint-config-recommended-vue": "^2.0.0",
         "stylelint-config-standard": "^40.0.0",
         "stylelint-high-performance-animation": "^2.0.0",
-        "stylelint-order": "^8.1.1",
+        "stylelint-order": "^8.1.2",
         "stylelint-use-logical": "^2.1.3"
     },
     "devDependencies": {
-        "@changesets/cli": "^2.30.0",
-        "@commitlint/cli": "^20.5.0",
-        "@commitlint/config-conventional": "^20.5.0",
-        "@nuxt/eslint-config": "^1.15.2",
+        "@changesets/cli": "^3.0.3",
+        "@commitlint/cli": "^21.2.4",
+        "@commitlint/config-conventional": "^21.2.4",
         "@zazen/changesets-changelog": "^2.0.4",
-        "eslint": "^10.0.3",
-        "husky": "^9.1.7",
-        "lint-staged": "^16.4.0",
-        "prettier": "^3.8.1",
-        "stylelint": "^17.5.0",
-        "typescript": "^5.9.3"
+        "stylelint": "^17.16.0",
+        "typescript": "^6.0.3",
+        "vite-plus": "catalog:"
     },
     "peerDependencies": {
         "stylelint": ">=17.0.0",
         "stylelint-order": "^8.0.0"
-    }
+    },
+    "packageManager": "pnpm@12.14.0"
 }

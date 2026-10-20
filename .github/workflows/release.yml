@@ -16,20 +16,18 @@ jobs:
     steps:
       # https://github.com/actions/checkout
       - name: Checkout repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           # This makes Actions fetch all Git history so that Changesets can
           # generate changelogs with the correct commits.
           fetch-depth: 0
 
       # https://github.com/pnpm/action-setup
-      - uses: pnpm/action-setup@v4
-        with:
-          version: latest
+      - uses: pnpm/action-setup@v6
 
       # https://github.com/actions/setup-node
       - name: Setup Node.js 24.x
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24.x
           cache: pnpm
@@ -40,7 +38,7 @@ jobs:
       # https://github.com/changesets/action
       - name: Create release PR or publish to npm
         id: changesets
-        uses: changesets/action@v1
+        uses: changesets/action@v2.1.2
         with:
           title: 'Publish release'
           commit: 'chore: publish release'
@@ -50,3 +48,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Merge main into develop
+        if: steps.changesets.outputs.published == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin develop
+          git checkout -B develop origin/develop
+          git merge --no-edit --no-verify origin/main
+          git push origin develop

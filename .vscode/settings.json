@@ -1,0 +1,16 @@
+{
+    // Linting & Formatting
+    // Taken from https://viteplus.dev/guide/ide-integration#vs-code
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+    "oxc.fmt.configPath": "./vite.config.ts",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.oxc": "explicit"
+    },
+    // User-level language formatter settings can override the workspace default formatter, so pin Oxc per language.
+    "[javascript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+    "[typescript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+    "[css]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+    "[json]": { "editor.defaultFormatter": "oxc.oxc-vscode" }
+}

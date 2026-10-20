@@ -1,0 +1,9 @@
+vp staged
+
+# Require a changeset when published source files change
+if [ ! -f "$(git rev-parse --git-dir)/MERGE_HEAD" ] \
+  && git diff --cached --name-only | grep -q '^src/' \
+  && ! git diff --cached --name-only --diff-filter=A | grep -qE '^\.changeset/.+\.md$'; then
+  echo "✖ Changes in src/ require a changeset. Run 'pnpm changeset' and stage the file (or use --no-verify to skip)."
+  exit 1
+fi
