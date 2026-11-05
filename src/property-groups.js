@@ -905,6 +905,14 @@ const propertyGroups = [
     {
         properties: ['page', 'break-before', 'break-after', 'break-inside', 'widows', 'orphans'],
     },
+
+    /**
+     * MathML.
+     * @see https://w3c.github.io/mathml-core/#css-extensions-for-math-layout
+     */
+    {
+        properties: ['math-style', 'math-shift', 'math-depth'],
+    },
 ];
 
 export default propertyGroups;
