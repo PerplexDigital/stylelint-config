@@ -39,7 +39,7 @@ The default setup applies these rules:
 - `@dreamsicle.io/stylelint-config-tailwindcss`
 - `stylelint-config-recommended-vue` (including `stylelint-config-recommended` and `stylelint-config-html`)
 - `@stylistic/stylelint-plugin`,
-- `stylelint-use-logical`
+- `stylelint-use-logical-spec`
 - `stylelint-high-performance-animation`
 - [Some overrides][] of these rules
 - `order/order` with the [Perplex][] order.
