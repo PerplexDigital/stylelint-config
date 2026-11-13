@@ -1,5 +1,16 @@
 # Change Log
 
+## 18.0.0
+
+### Major Changes
+
+- Require Stylelint 18 (and Node.js >= 22.22.2). Bumps `stylelint-config-standard` to 41 and `@stylistic/stylelint-plugin` to 6. See the [Stylelint 18 migration guide](https://stylelint.io/migration-guide/to-18). ([#52](https://github.com/PerplexDigital/stylelint-config/pull/52))
+- Replace unmaintained `stylelint-use-logical` with `stylelint-use-logical-spec`. The rule is renamed from `csstools/use-logical` to `liberty/use-logical-spec`, so update any `stylelint-disable` comments. The new plugin covers more logical properties and values, so it may report new problems. ([#52](https://github.com/PerplexDigital/stylelint-config/pull/52))
+
+### Minor Changes
+
+- Add MathML properties (`math-style`, `math-shift`, `math-depth`) ([#52](https://github.com/PerplexDigital/stylelint-config/pull/52))
+
 ## 17.5.0
 
 ### Minor Changes
