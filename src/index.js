@@ -10,7 +10,7 @@ const config = {
     plugins: [
         '@stylistic/stylelint-plugin',
         'stylelint-order',
-        'stylelint-use-logical',
+        'stylelint-use-logical-spec',
         'stylelint-high-performance-animation',
     ],
     ignoreFiles: ['*.min.css'],
@@ -64,7 +64,7 @@ const config = {
             },
         ],
         // Plugin rules
-        'csstools/use-logical': [
+        'liberty/use-logical-spec': [
             'always',
             {
                 except: [/width/i, /height/i],
