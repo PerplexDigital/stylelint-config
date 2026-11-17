@@ -67,7 +67,8 @@ const config = {
         'liberty/use-logical-spec': [
             'always',
             {
-                except: [/width/i, /height/i],
+                // overflow-block/inline need Safari 26+
+                except: [/width/i, /height/i, /^overflow-[xy]$/i],
             },
         ],
         '@stylistic/block-closing-brace-newline-before': 'always',
