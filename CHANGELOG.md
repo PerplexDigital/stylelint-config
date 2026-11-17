@@ -1,5 +1,11 @@
 # Change Log
 
+## 18.0.1
+
+### Patch Changes
+
+- Allow `overflow-x` and `overflow-y` again, as `overflow-inline` and `overflow-block` need Safari 26+ ([#54](https://github.com/PerplexDigital/stylelint-config/pull/54))
+
 ## 18.0.0
 
 ### Major Changes
