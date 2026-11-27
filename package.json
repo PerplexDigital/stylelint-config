@@ -44,23 +44,23 @@
         "@dreamsicle.io/stylelint-config-tailwindcss": "^1.3.2",
         "@stylistic/stylelint-plugin": "^6.0.1",
         "stylelint-config-recommended-vue": "^2.0.0",
-        "stylelint-config-standard": "^41.0.0",
+        "stylelint-config-standard": "^41.1.0",
         "stylelint-high-performance-animation": "^2.1.0",
-        "stylelint-order": "^8.1.3",
-        "stylelint-use-logical-spec": "^6.0.0"
+        "stylelint-order": "^9.0.0",
+        "stylelint-use-logical-spec": "^6.0.1"
     },
     "devDependencies": {
         "@changesets/cli": "^3.0.3",
         "@commitlint/cli": "^21.2.4",
         "@commitlint/config-conventional": "^21.2.4",
         "@zazen/changesets-changelog": "^3.0.0",
-        "stylelint": "^18.0.0",
+        "stylelint": "^18.1.0",
         "typescript": "^7.0.2",
         "vite-plus": "catalog:"
     },
     "peerDependencies": {
         "stylelint": ">=18.0.0",
-        "stylelint-order": "^8.0.0"
+        "stylelint-order": "^8.0.0 || ^9.0.0"
     },
     "packageManager": "pnpm@12.18.0"
 }
