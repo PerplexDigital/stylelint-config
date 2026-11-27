@@ -1,6 +1,6 @@
 {
     "name": "@perplex-digital/stylelint-config",
-    "version": "18.0.1",
+    "version": "18.1.0",
     "description": "Order and Concentric-based property sorting for Stylelint.",
     "keywords": [
         "concentric",
