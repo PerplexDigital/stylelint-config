@@ -1,5 +1,11 @@
 # Change Log
 
+## 18.1.0
+
+### Minor Changes
+
+- Support `stylelint-order` v9 ([#56](https://github.com/PerplexDigital/stylelint-config/pull/56))
+
 ## 18.0.1
 
 ### Patch Changes
